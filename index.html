@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 6 - Práctica con APIs</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        section { margin-bottom: 40px; }
+        input, button { margin: 5px; padding: 5px; }
+        img { width: 50px; height: 50px; border-radius: 50%; }
+        table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+        #imageGallery img { width: 150px; height: 150px; object-fit: cover; }
+        #pokemonResult img, #countryResult img { width: 150px; }
+        #cryptoPrices p { font-size: 1.2em; }
+        ul { list-style-type: none; padding: 0; }
+        li { cursor: pointer; margin: 5px 0; background: #f0f0f0; padding: 5px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>Actividad 6 - Práctica con APIs</h1>
+
+    <!-- 1. Lista de Usuarios -->
+    <section id="ejercicio1">
+        <h2>1. Lista de Usuarios</h2>
+        <input type="text" id="searchUser" placeholder="Buscar usuario">
+        <table>
+            <thead>
+                <tr><th>Foto</th><th>Nombre</th><th>Correo</th></tr>
+            </thead>
+            <tbody id="userList"></tbody>
+        </table>
+    </section>
+
+    <!-- 2. Noticias de Tecnología (Simulada) -->
+    <section id="ejercicio2">
+        <h2>2. Noticias de Tecnología (Simuladas)</h2>
+        <input type="text" id="searchNews" placeholder="Buscar noticia">
+        <button id="getNews">Buscar Noticias</button>
+        <div id="newsList"></div>
+    </section>
+
+    <!-- 3. Clima en Tiempo Real (Simulado) -->
+    <section id="ejercicio3">
+        <h2>3. Clima en Tiempo Real (Simulado)</h2>
+        <input type="text" id="cityInput" placeholder="Ingresa una ciudad">
+        <button id="getWeather">Consultar Clima</button>
+        <div id="weatherResult"></div>
+    </section>
+
+    <!-- 4. Conversor de Monedas (Simulado) -->
+    <section id="ejercicio4">
+        <h2>4. Conversor de Monedas (Simulado)</h2>
+        <input type="number" id="amount" placeholder="Cantidad">
+        <input type="text" id="fromCurrency" placeholder="De (USD)">
+        <input type="text" id="toCurrency" placeholder="A (EUR)">
+        <button id="convertCurrency">Convertir</button>
+        <div id="currencyResult"></div>
+    </section>
+
+    <!-- 5. Galería de Imágenes (Simulada) -->
+    <section id="ejercicio5">
+        <h2>5. Galería de Imágenes (Simuladas)</h2>
+        <input type="text" id="searchImage" placeholder="Buscar imágenes">
+        <button id="getImages">Buscar</button>
+        <div id="imageGallery" style="display: flex; flex-wrap: wrap; gap: 10px;"></div>
+    </section>
+
+    <!-- 6. Pokédex -->
+    <section id="ejercicio6">
+        <h2>6. Pokédex</h2>
+        <input type="text" id="searchPokemon" placeholder="Nombre o Número">
+        <button id="getPokemon">Buscar</button>
+        <div id="pokemonResult"></div>
+    </section>
+
+    <!-- 7. Lista de Películas (Simuladas) -->
+    <section id="ejercicio7">
+        <h2>7. Lista de Películas (Simuladas)</h2>
+        <input type="text" id="searchMovie" placeholder="Buscar película">
+        <button id="getMovies">Buscar</button>
+        <div id="movieList"></div>
+    </section>
+
+    <!-- 8. Seguimiento de Criptomonedas -->
+    <section id="ejercicio8">
+        <h2>8. Seguimiento de Criptomonedas</h2>
+        <button id="getCrypto">Actualizar Precios</button>
+        <div id="cryptoPrices"></div>
+    </section>
+
+    <!-- 9. Agenda de Tareas -->
+    <section id="ejercicio9">
+        <h2>9. Agenda de Tareas</h2>
+        <input type="text" id="newTask" placeholder="Nueva tarea">
+        <button id="addTask">Agregar</button>
+        <ul id="taskList"></ul>
+    </section>
+
+    <!-- 10. Datos de Países -->
+    <section id="ejercicio10">
+        <h2>10. Datos de Países</h2>
+        <input type="text" id="searchCountry" placeholder="Nombre del país">
+        <button id="getCountry">Buscar</button>
+        <div id="countryResult"></div>
+    </section>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</body>
+</html>
